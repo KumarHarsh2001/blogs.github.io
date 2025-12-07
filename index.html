@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech Stack Knowledge Hub</title>
+  <meta name="description" content="Curated blogs that cover core to advanced topics for popular engineering stacks including MySQL, MongoDB, React, JavaScript, Docker, and Java." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#blog-grid">Skip to blog list</a>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <p class="eyebrow">Tech Support Stack Blogs</p>
+      <h1>Level up every layer of your tooling</h1>
+      <p class="lede">
+        Each article distills fundamentals, advanced architecture tips, annotated code examples,
+        and interview-style practice prompts so you can move from day-one productivity to
+        senior-level mastery across databases, frontend frameworks, programming languages, and DevOps tooling.
+      </p>
+
+      <div class="controls">
+        <label class="field" for="searchInput">
+          <span class="field-label">Search any topic, command, or stack</span>
+          <input id="searchInput" type="search" name="search" placeholder="Search by stack, concept, or keyword" autocomplete="off" />
+        </label>
+        <button class="button ghost" type="button" data-clear>Clear filters</button>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="Filter stacks by discipline">
+        <button class="filter-button is-active" data-filter="all">All stacks</button>
+        <button class="filter-button" data-filter="Database">Databases</button>
+        <button class="filter-button" data-filter="Frontend">Frontend</button>
+        <button class="filter-button" data-filter="Language">Languages</button>
+        <button class="filter-button" data-filter="DevOps">DevOps</button>
+      </div>
+
+      <p class="stats" data-stats>Loading stacks…</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="container" aria-live="polite" aria-busy="false">
+      <div id="blog-grid" class="blog-grid" data-blog-list></div>
+      <div class="empty-state" data-empty-state hidden>
+        <h2>No stacks match your filters</h2>
+        <p>Try clearing filters or searching for a broader concept.</p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-content">
+        <div>
+          <p class="eyebrow">Extend the hub</p>
+          <h2>Add the next stack in minutes</h2>
+          <p>
+            Duplicate any entry in <code>assets/js/data.js</code>, rename the stack, and update the
+            fundamentals, advanced tactics, example code, and practice prompts. The UI automatically renders
+            your new stack without additional markup changes.
+          </p>
+        </div>
+        <a class="button" href="docs/README.md">Read the contributor guide</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>Built with semantic HTML, modular CSS, and vanilla JavaScript.</p>
+      <p>
+        Maintained on the <strong>feature/tech-blog-site</strong> branch. Merge into <code>main</code> once the review is
+        complete.
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
